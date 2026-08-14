@@ -37,7 +37,7 @@ fn main() {
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue, // the _ is a catch-all value; we want to match ALL errors
-            // The "continue" calls another loop, preventing the rest of the current loop's execution
+                                // The "continue" calls another loop, preventing the rest of the current loop's execution
         };
         // Does Rust handle type conversion automatically?
         // EDIT: Trim removes additional characters and parse converts the string to another type
@@ -54,11 +54,10 @@ fn main() {
             Ordering::Equal => {
                 println!("You win!");
                 break; // ends the program's loop after the player successfully guesses
-            }
-            // Cmp method compares two valuesl; can be called on anything
+            } // Cmp method compares two valuesl; can be called on anything
 
-            // EDIT: match exp. is made of "arms" --> consist of patterns to match against
-            // The match takes the output of the guess, such as Ordering::Less --> looks up the "arm", then executes the pattern
+              // EDIT: match exp. is made of "arms" --> consist of patterns to match against
+              // The match takes the output of the guess, such as Ordering::Less --> looks up the "arm", then executes the pattern
         }
     }
 }
